@@ -1,34 +1,28 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Profile.module.scss';
 import React, { MouseEvent } from 'react';
+import ProfileItem from './ProfileItem';
+import ProfileModal from '../ProfileModal/ProfileModal';
 
 const Profile = () => {
 
     const profileRef = useRef<HTMLDivElement>(null);
+    const mouseItemRef = useRef<HTMLSpanElement>(null);
+    const [animEnd, setAnimEnd] = useState<Boolean>(false);
 
     function addMouseMove(e: MouseEvent<HTMLDivElement>) {
+        if (mouseItemRef.current) {
+            mouseItemRef.current.style.left = e.clientX + 'px';
+            mouseItemRef.current.style.top = e.clientY + 'px';
+        }
     }
-
-    function addColorEvent() {
-        const left = Math.floor(Math.random() * document.body.getBoundingClientRect().width);
-        const top = Math.floor(Math.random() * document.body.getBoundingClientRect().height);
-
-        const circle = document.createElement('span');
-        circle.style.backgroundColor = 'red';
-        circle.style.left = left + 'px';
-        circle.style.top = top + 'px';
-        circle.style.width = '100px';
-        circle.style.height = '100px';
-        profileRef.current?.appendChild(circle);
-    }
-
-    useEffect(() => {
-        addColorEvent();
-    }, []);
 
     return(
         <div ref={profileRef} className={styles.profile} onMouseMove={addMouseMove}>
-            <div className={styles.title}>Front-End Developer Jihun. Kim</div>
+            <div className={styles.title} onAnimationEnd={() => setAnimEnd(true)}>Front-End Developer Jihun. Kim</div>
+            { animEnd && <ProfileItem />}
+            <span className={styles.mouseItem} ref={mouseItemRef}></span>
+            {/* <ProfileModal /> */}
         </div>
     )
 }

@@ -1,18 +1,63 @@
 .profile {
     background-color: whitesmoke;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     .title {
+        margin-top: 350px;
         font-size: 30px;
+        animation: titleAni 2s ease-out;
     }
 
-    span {
+    .mouseItem {
         position: absolute;
-        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 90%;
+        animation: mouseColor 8s 1s linear infinite;
+    }
+
+    @keyframes titleAni {
+        from {
+            color: white;
+            opacity: 0;
+            font-size: 10px;
+        };
+
+        to {
+            color: black;
+            opacity: 1;
+            font-size: 30px;
+        }
+    }
+
+    @keyframes mouseColor {
+        0% {
+            background-color: yellow;
+        };
+
+        20% {
+            background-color: orange;
+        }
+
+        40% {
+            background-color: red;
+        }
+
+        60% {
+            background-color: blue;
+        }
+
+        80% {
+            background-color: green;
+        }
+
+        100% {
+            background-color: purple;
+        }
     }
 }
