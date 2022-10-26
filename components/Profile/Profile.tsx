@@ -9,6 +9,7 @@ const Profile = () => {
     const profileRef = useRef<HTMLDivElement>(null);
     const mouseItemRef = useRef<HTMLSpanElement>(null);
     const [animEnd, setAnimEnd] = useState<Boolean>(false);
+    const [onModal, setOnModal] = useState<Boolean>(false);
 
     function addMouseMove(e: MouseEvent<HTMLDivElement>) {
         if (mouseItemRef.current) {
@@ -17,12 +18,16 @@ const Profile = () => {
         }
     }
 
+    function onSetModal(state:boolean) {
+        setOnModal(state);
+    }
+
     return(
         <div ref={profileRef} className={styles.profile} onMouseMove={addMouseMove}>
             <div className={styles.title} onAnimationEnd={() => setAnimEnd(true)}>Front-End Developer Jihun. Kim</div>
-            { animEnd && <ProfileItem />}
+            { animEnd && <ProfileItem onSetModal={onSetModal}/>}
             <span className={styles.mouseItem} ref={mouseItemRef}></span>
-            {/* <ProfileModal /> */}
+            { onModal && <ProfileModal /> }
         </div>
     )
 }
