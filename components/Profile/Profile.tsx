@@ -19,8 +19,19 @@ const Profile = () => {
         }
     }
 
+    function addBubbleEvent(e: MouseEvent<HTMLDivElement>) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        bubble.style.left = e.clientX + 'px';
+        bubble.style.top = e.clientY + 'px';
+        profileRef.current?.appendChild(bubble);
+        bubble.addEventListener('animationend', (e: any) => {
+            e.target.parentNode.removeChild(e.target);
+        });
+    }
+
     return(
-        <div ref={profileRef} className={styles.profile} onMouseMove={addMouseMove}>
+        <div ref={profileRef} className={styles.profile} onMouseMove={addMouseMove} onClick={addBubbleEvent}>
             <div className={styles.title} onAnimationEnd={() => setAnimEnd(true)}>Front-End Developer Jihun. Kim</div>
             { animEnd && <ProfileItem />}
             <span className={styles.mouseItem} ref={mouseItemRef}></span>
