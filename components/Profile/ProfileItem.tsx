@@ -1,16 +1,27 @@
+import useUserStore from '../../store/store';
 import styles from './ProfileItem.module.scss';
 
-const ProfileItem = ({ onSetModal }: any) => {
-    const profileItems: string[] = ['who am I?', 'projects', 'contact'];
+interface IProFileItem {
+    text: string;
+    key: string;
+}
 
-    function onItemClick() {
-        onSetModal(true);
+const ProfileItem = () => {
+    const profileItems: IProFileItem[] = [
+        { text: 'who am I?', key: 'info' }, 
+        { text: 'projects', key: 'portFolio'},
+        { text: 'contact', key: 'contact'}
+    ];
+    const { onOpenModal } = useUserStore();
+
+    function onItemClick(item: string) {
+        onOpenModal(item);
     }
 
     return (
         <div className={styles.profileItems}>
-            { profileItems.map((item: string) => {
-                return <div className={styles.item} key={item} onClick={onItemClick}>item</div>
+            { profileItems.map((item: IProFileItem) => {
+                return <div className={styles.item} key={item.key} onClick={() => onItemClick(item.key)}>{item.text}</div>
             })}
         </div>
     )
