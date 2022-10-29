@@ -10,7 +10,7 @@ const ProfileItem = () => {
     const profileItems: IProFileItem[] = [
         { text: 'who am I?', key: 'info' }, 
         { text: 'projects', key: 'portFolio'},
-        { text: 'contact', key: 'contact'}
+        { text: 'more...', key: 'more'}
     ];
     const { onOpenModal } = useUserStore();
 

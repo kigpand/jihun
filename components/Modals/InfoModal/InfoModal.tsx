@@ -1,6 +1,10 @@
+import Link from 'next/link';
+
 const InfoModal = () => {
     return (
-        <div>인포</div>
+        <div>
+            <Link href={`/InfoPage`}>인포</Link>
+        </div>
     )
 }
 

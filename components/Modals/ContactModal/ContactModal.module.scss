@@ -1,0 +1,58 @@
+@import '../../../styles/common.scss';
+
+.contactModal {
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+    border: 3px solid $borderColor;
+
+    .modalTitle {
+        margin-left: 10px;
+        width: 110px;
+        margin-top: 10px;
+        font-size: 20px;
+        @include linkItem;
+    }
+
+    .header {
+        margin: 30px 0;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            line-height: 30px;
+        }
+
+        .subTitle {
+            font-style: italic;
+            margin-top: 10px;
+        }
+    }
+
+    .miniTitle {
+        margin-left: 10px;
+        @include linkItem;
+    }
+
+    .items {
+        margin: 0 0 30px 10px;
+        .item {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+    
+            .texts {
+                margin-left: 10px;
+                font-size: 17px;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

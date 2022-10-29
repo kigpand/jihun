@@ -1,0 +1,10 @@
+@mixin linkItem {
+    padding: 3px;
+    background-color: rgb(124, 255, 63);
+    color: rgb(25, 163, 25);
+    border: 2px solid rgb(0, 202, 10);
+    border-radius: 8px;
+}
+
+$borderColor: rgb(0, 202, 10);
+$textColor: rgb(25, 163, 25);

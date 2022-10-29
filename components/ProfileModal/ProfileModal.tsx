@@ -14,10 +14,11 @@ const ProfileModal = () => {
     }
 
     return (
-        <div className={styles.profileModal} onClick={onClose}>
+        <div className={styles.profileModal}>
             { modal === 'portFolio' && <PortFolioModal />}
             { modal === 'info' && <InfoModal />}
-            { modal === 'contact' && <ContactModal />}
+            { modal === 'more' && <ContactModal />}
+            <div className={styles.back} onClick={onClose}></div>
         </div>
     )
 }
