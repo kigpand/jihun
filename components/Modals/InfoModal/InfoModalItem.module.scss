@@ -1,0 +1,22 @@
+.infoItem {
+    display: flex;
+    font-size: 14px;
+    margin-top: 5px;
+    
+    .infoTitle {
+        width: 70px;
+        padding: 5px;
+        font-weight: bold;
+        background-color: lightgray;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .infoText {
+        width: 150px;
+        padding: 5px;
+        background-color: whitesmoke;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}

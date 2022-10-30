@@ -13,6 +13,18 @@
     border-radius: 8px;
     z-index: 1;
     border: 3px solid $borderColor;
+
+    .modalTitle {
+        margin-left: 10px;
+        width: 110px;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 3px;
+        background-color: rgb(214, 214, 214);
+        color: rgb(114, 114, 114);
+        border: 2px solid rgb(121, 121, 121);
+        border-radius: 8px;
+    }
 }
 
 $borderColor: rgb(121, 121, 121);

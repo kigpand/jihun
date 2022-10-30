@@ -3,14 +3,6 @@
 .contactModal {
     @include modal;
 
-    .modalTitle {
-        margin-left: 10px;
-        width: 110px;
-        margin-top: 20px;
-        font-size: 20px;
-        @include linkItem;
-    }
-
     .header {
         margin: 30px 0;
         font-size: 15px;
