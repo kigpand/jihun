@@ -1,10 +1,19 @@
 @mixin linkItem {
     padding: 3px;
-    background-color: rgb(124, 255, 63);
-    color: rgb(25, 163, 25);
-    border: 2px solid rgb(0, 202, 10);
+    background-color: rgb(214, 214, 214);
+    color: rgb(114, 114, 114);
+    border: 2px solid rgb(121, 121, 121);
     border-radius: 8px;
 }
 
-$borderColor: rgb(0, 202, 10);
+@mixin modal {
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 1;
+    border: 3px solid $borderColor;
+}
+
+$borderColor: rgb(121, 121, 121);
 $textColor: rgb(25, 163, 25);

@@ -1,17 +1,12 @@
 @import '../../../styles/common.scss';
 
 .contactModal {
-    width: 500px;
-    height: 450px;
-    background-color: white;
-    border-radius: 20px;
-    z-index: 1;
-    border: 3px solid $borderColor;
+    @include modal;
 
     .modalTitle {
         margin-left: 10px;
         width: 110px;
-        margin-top: 10px;
+        margin-top: 20px;
         font-size: 20px;
         @include linkItem;
     }
@@ -33,9 +28,20 @@
         }
     }
 
-    .miniTitle {
+    .linkTitle,
+    .contactTitle {
         margin-left: 10px;
         @include linkItem;
+    }
+
+    .linkTitle {
+        margin-top: 50px;
+        width: 70px;
+    }
+
+    .contactTitle {
+        margin-top: 80px;
+        width: 100px;
     }
 
     .items {
