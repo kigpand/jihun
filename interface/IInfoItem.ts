@@ -1,4 +1,4 @@
-export interface IModalItem {
+export interface IInfoItem {
     title: string;
     text: string;
 }

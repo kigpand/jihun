@@ -1,0 +1,14 @@
+@import '../../styles/common.scss';
+
+.company {
+    width: 700px;
+
+    .title {
+        width: 100%;
+
+        .titleItem {
+            width: 120px;
+            @include linkItem;
+        }
+    }
+}

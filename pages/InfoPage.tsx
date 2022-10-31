@@ -1,6 +1,13 @@
+import InfoCompany from '../components/Info/InfoCompany';
+import InfoHeader from '../components/Info/InfoHeader';
+import styles from '../styles/Home.module.scss';
+
 const InfoPage = () => {
     return (
-        <div>info Page</div>
+        <div className={styles.infoPage}>
+            <InfoHeader />
+            <InfoCompany />
+        </div>
     )
 }
 

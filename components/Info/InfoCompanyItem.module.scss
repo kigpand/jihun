@@ -1,0 +1,39 @@
+.companyItem {
+    margin-bottom: 30px;
+
+    .title {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        height: 400px;
+        margin-top: 10px;
+
+        .info {
+            width: 30%;
+            height: 100%;
+            background-color: lightgray;
+            padding: 3px;
+
+            .items {
+                display: flex;
+                font-size: 14px;
+                margin-top: 10px;
+
+                .itemTitle {
+                    width: 100px;
+                    padding: 3px;
+                }
+            }
+        }
+
+        .content {
+            width: 70%;
+            height: 100%;
+        }
+    }
+}

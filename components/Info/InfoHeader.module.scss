@@ -1,0 +1,40 @@
+@import '../../styles/common.scss';
+
+.infoHeader {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .title {
+        width: 100%;
+
+        .titleItem {
+            margin-top: 30px;
+            @include pageTitle;
+        }
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+        .img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+    }
+
+    .infoLine {
+        width: 100%;
+        height: 4px;
+        margin: 20px 0;
+        background-color: lightgray;
+    }
+}

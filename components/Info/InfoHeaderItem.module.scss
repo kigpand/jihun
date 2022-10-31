@@ -1,0 +1,21 @@
+.infoItem {
+    display: flex;
+    margin: 10px 0 0 50px;
+    
+    .infoTitle {
+        width: 100px;
+        padding: 10px;
+        font-weight: bold;
+        background-color: rgb(139, 139, 139);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .infoText {
+        width: 200px;
+        padding: 10px;
+        background-color: lightgray;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}

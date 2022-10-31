@@ -1,7 +1,7 @@
-import { IInfoItem } from '../../../interface/IInfoItem';
-import styles from './InfoModalItem.module.scss';
+import { IInfoItem } from '../../interface/IInfoItem';
+import styles from './InfoHeaderItem.module.scss';
 
-const InfoModalItem = ({ title, text}: IInfoItem) => {
+const InfoHeaderItem = ({ title, text }: IInfoItem) => {
     return (
         <div className={styles.infoItem}>
             <div className={styles.infoTitle}>{title}</div>
@@ -10,4 +10,4 @@ const InfoModalItem = ({ title, text}: IInfoItem) => {
     )
 }
 
-export default InfoModalItem;
+export default InfoHeaderItem;
