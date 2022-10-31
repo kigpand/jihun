@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     .titleContainer {
         width: 100%;
@@ -39,6 +40,34 @@
             margin-left: 10px;
             width: 100px;
             @include linkItem;
+        }
+
+        .careerText{
+            width: 90%;
+            margin: 10px 0 0 10px;
+            display: flex;
+
+            .period {
+                width: 50%;
+                padding: 5px;
+                background-color: lightgray;
+            }
+
+            .company {
+                width: 50%;
+                padding: 5px;
+                background-color: whitesmoke;
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 10px;
+
+        &:hover {
+            font-weight: bold;
+            text-decoration: underline;
         }
     }
 }
