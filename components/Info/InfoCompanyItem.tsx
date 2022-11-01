@@ -9,7 +9,7 @@ const InfoCompanyItem = () => {
                     <div className={styles.items}>
                         <div className={styles.itemTitle}>담당 업무</div>
                         <div className={styles.itemText}>
-                            <div>Front-end 개발</div>
+                            <div>- Front-end 개발</div>
                         </div>
                     </div>
                     <div className={styles.items}>

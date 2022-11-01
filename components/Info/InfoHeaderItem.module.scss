@@ -1,3 +1,5 @@
+@import '../../styles/common.scss';
+
 .infoItem {
     display: flex;
     margin: 10px 0 0 50px;
@@ -17,5 +19,10 @@
         background-color: lightgray;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+    }
+
+    @include mobile {
+        margin: 10px 0 0 0;
+        font-size: 12px;
     }
 }

@@ -70,4 +70,14 @@
             text-decoration: underline;
         }
     }
+
+    @include mobile {
+        .careerContainer {
+            font-size: 13px;
+        }
+
+        .footer {
+            font-size: 13px;
+        }
+    }
 }

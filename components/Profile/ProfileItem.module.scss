@@ -1,4 +1,4 @@
-
+@import '../../styles/common.scss';
 
 .profileItems {
     width: 500px;
@@ -34,6 +34,18 @@
         &:hover {
             cursor: pointer;
             background-color: lightgray;
+        }
+    }
+
+    @include mobile {
+        width: 300px;
+        top: 40%;
+
+        .item {
+            font-size: 13px;
+            width: 100%;
+            position: static;
+            margin-top: 10px;
         }
     }
 

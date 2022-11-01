@@ -11,4 +11,15 @@
             @include linkItem;
         }
     }
+
+    @include mobile {
+        width: 100%;
+        margin-left: 20px;
+
+        .title {
+            .titleItem {
+                width: 100px;
+            }
+        }
+    }
 }

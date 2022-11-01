@@ -1,4 +1,4 @@
-
+@import '../../styles/common.scss';
 
 .profile {
     background-color: whitesmoke;
@@ -27,6 +27,15 @@
         animation: mouseColor 8s 1s linear infinite;
     }
 
+    @include mobile {
+        .title {
+            margin-top: 200px;
+            width: 300px;
+            font-size: 20px;
+            animation: titleMobileAni 2s ease-out;
+        }
+    }
+
     @keyframes titleAni {
         from {
             color: white;
@@ -38,6 +47,20 @@
             color: black;
             opacity: 1;
             font-size: 30px;
+        }
+    }
+
+    @keyframes titleMobileAni {
+        from {
+            color: white;
+            opacity: 0;
+            font-size: 0px;
+        };
+
+        to {
+            color: black;
+            opacity: 1;
+            font-size: 20px;
         }
     }
 
