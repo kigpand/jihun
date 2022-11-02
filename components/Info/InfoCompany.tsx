@@ -1,3 +1,5 @@
+import { companies } from '../../common/company';
+import { ICompany } from '../../interface/ICompany';
 import styles from './InfoCompany.module.scss';
 import InfoCompanyItem from './InfoCompanyItem';
 
@@ -7,7 +9,9 @@ const InfoCompany = () => {
             <div className={styles.title}>
                 <div className={styles.titleItem}>&lt;Career &gt;</div>
             </div>
-            <InfoCompanyItem />
+            { companies.map((company: ICompany) => {
+                return <InfoCompanyItem company={company} key={company.title} />
+            })}
         </div>
     )
 }

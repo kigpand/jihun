@@ -25,6 +25,10 @@
         border: 2px solid rgb(121, 121, 121);
         border-radius: 8px;
     }
+
+    @media (max-width: 767px){ 
+        width: 100%;
+    }
 }
 
 @mixin pageTitle {

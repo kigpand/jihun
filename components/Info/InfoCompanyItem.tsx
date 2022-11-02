@@ -1,26 +1,39 @@
+import { ICompany } from '../../interface/ICompany';
 import styles from './InfoCompanyItem.module.scss';
 
-const InfoCompanyItem = () => {
+interface ICompanyItem {
+    company: ICompany;
+    key: string;
+}
+
+const InfoCompanyItem = ({ company, key }: ICompanyItem) => {
     return (
         <div className={styles.companyItem}>
-            <div className={styles.title}>창소프트아이앤아이 (2021.04.01 ~ 2021.10.01)</div>
+            <div className={styles.title}>{company.title} ({company.date})</div>
             <div className={styles.main}>
                 <div className={styles.info}>
                     <div className={styles.items}>
                         <div className={styles.itemTitle}>담당 업무</div>
                         <div className={styles.itemText}>
-                            <div>- Front-end 개발</div>
+                            { company.work.map((work: string) => {
+                                return <div key={work}>- {work}</div>
+                            })}
                         </div>
                     </div>
                     <div className={styles.items}>
                         <div className={styles.itemTitle}>주요 기술</div>
                         <div className={styles.itemText}>
-                            <div>- Javascript</div>
-                            <div>- React</div>
+                            { company.stack.map((stack: string) => {
+                                return <div key={stack}>- {stack}</div>
+                            })}
                         </div>
                     </div>
                 </div>
-                <div className={styles.content}>asdas</div>
+                <div className={styles.content}>
+                    { company.content.map((content: string) => {
+                        return <div key={content}>- {content}</div>
+                    })}
+                </div>
             </div>
         </div>
     )
