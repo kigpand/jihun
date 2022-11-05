@@ -42,6 +42,16 @@
         .content {
             width: 70%;
             height: 100%;
+            padding: 10px;
+            font-size: 14px;
+
+            .contentTitle {
+                font-weight: bold;
+            }
+
+            .contentItem {
+                margin-top: 5px;
+            }
         }
     }
 
@@ -58,6 +68,11 @@
                     flex-direction: column;
                 }
             }
+            
+            .content {
+                font-size: 12px;
+            }
         }
+
     }
 }

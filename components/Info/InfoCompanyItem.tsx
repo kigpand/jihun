@@ -6,7 +6,7 @@ interface ICompanyItem {
     key: string;
 }
 
-const InfoCompanyItem = ({ company, key }: ICompanyItem) => {
+const InfoCompanyItem = ({ company }: ICompanyItem) => {
     return (
         <div className={styles.companyItem}>
             <div className={styles.title}>{company.title} ({company.date})</div>
@@ -30,8 +30,9 @@ const InfoCompanyItem = ({ company, key }: ICompanyItem) => {
                     </div>
                 </div>
                 <div className={styles.content}>
-                    { company.content.map((content: string) => {
-                        return <div key={content}>- {content}</div>
+                    <div className={styles.contentTitle}>주요 업무</div>
+                    { company.content.map((content: string, i: number) => {
+                        return <div  className={styles.contentItem} key={i}>- {content}</div>
                     })}
                 </div>
             </div>
