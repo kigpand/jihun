@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './Profile.module.scss';
 import React, { MouseEvent } from 'react';
 import ProfileItem from './ProfileItem';
