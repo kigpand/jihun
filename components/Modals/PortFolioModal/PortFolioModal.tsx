@@ -26,14 +26,14 @@ const PortFolioModal = () => {
     return (
         <div className={styles.portFolioModal}>
             <div className={styles.titleContainer}>
-                <div className={styles.modalTitle}>&lt;Info &gt;</div>
+                <div className={styles.modalTitle}>&lt;PortFolio &gt;</div>
             </div>
             <div className={styles.main}>
                 <PortFolioModalBtn />
                 <div className={styles.img} style={{ backgroundColor: item?.img[0]}}></div>
                 <div className={styles.text}>{item?.text}</div>
                 <div className={styles.footer}>
-                    <Link href={'/InfoPage'}>자세히 알아보기...</Link>
+                    <Link href={'/PortFolioPage'}>자세히 알아보기...</Link>
                 </div>
             </div>
         </div>

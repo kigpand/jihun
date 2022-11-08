@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import usePortFolio from '../../store/portFolio';
 import useUserStore from '../../store/store';
 import ContactModal from '../Modals/ContactModal/ContactModal';
 import InfoModal from '../Modals/InfoModal/InfoModal';
@@ -7,10 +8,12 @@ import styles from './ProfileModal.module.scss';
 
 const ProfileModal = () => {
 
-    const { modal ,onCloseModal } = useUserStore();
+    const { modal, onCloseModal } = useUserStore();
+    const { changePortFolio } = usePortFolio();
 
     function onClose() {
         onCloseModal();
+        changePortFolio('포켓몬도감');
     }
 
     return (
