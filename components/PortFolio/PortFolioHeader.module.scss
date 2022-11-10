@@ -1,0 +1,14 @@
+@import '../../styles/common.scss';
+
+.portFolioHeader {
+    width: 800px;
+    .title {
+        width: 100%;
+
+        .titleItem {
+            margin-top: 30px;
+            @include pageTitle;
+            width: 220px;
+        }
+    }
+}
