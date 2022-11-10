@@ -1,6 +1,8 @@
+import styles from '../styles/Home.module.scss';
+
 const PortFolioPage = () => {
     return (
-        <div>포폴</div>
+        <div className={styles.portFolioPage}>포폴</div>
     )
 }
 

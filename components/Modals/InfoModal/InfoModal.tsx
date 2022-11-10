@@ -8,7 +8,7 @@ const InfoModal = () => {
     return (
         <div className={styles.infoModal}>
             <div className={styles.titleContainer}>
-                <div className={styles.modalTitle}>&lt;Info &gt;</div>
+                <div className={styles.modalTitle}>&lt;Info /&gt;</div>
             </div>
             <div className={styles.myInfo}>
                 <div className={styles.img}></div>

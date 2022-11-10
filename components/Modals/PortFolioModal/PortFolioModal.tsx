@@ -26,7 +26,7 @@ const PortFolioModal = () => {
     return (
         <div className={styles.portFolioModal}>
             <div className={styles.titleContainer}>
-                <div className={styles.modalTitle}>&lt;PortFolio &gt;</div>
+                <div className={styles.modalTitle}>&lt;PortFolio /&gt;</div>
             </div>
             <div className={styles.main}>
                 <PortFolioModalBtn />

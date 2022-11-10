@@ -18,7 +18,7 @@ const InfoHeader = () => {
         <div className={styles.infoHeader}>
             <div className={styles.backBtn} onClick={onBackBtn}>&lt; back</div>
             <div className={styles.title}>
-                <div className={styles.titleItem}>&lt;Info &gt;</div>
+                <div className={styles.titleItem}>&lt;Info /&gt;</div>
             </div>
             <div className={styles.main}>
                 <div className={styles.img}></div>

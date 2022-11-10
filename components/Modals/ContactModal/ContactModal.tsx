@@ -7,7 +7,7 @@ import Image from 'next/image';
 const ContactModal = () => {
     return (
         <div className = {styles.contactModal}>
-            <div className={styles.modalTitle}>&lt;More... &gt;</div>
+            <div className={styles.modalTitle}>&lt;More... /&gt;</div>
             <div className={styles.header}>
                 <div className={styles.title}><b>I will prepare and some day my chance will come.</b><br />나는 준비할 것이다. 그러면 언젠가 나에게도 기회가 올 것이다.</div>
                 <div className={styles.subTitle}>- Abraham Lincoln -</div>
