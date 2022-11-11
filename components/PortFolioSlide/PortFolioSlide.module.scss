@@ -2,13 +2,14 @@
     width: 800px;
     
     .container {
-        display: flex;
         overflow: hidden;
-        width: 800px;
+        width: 500px;
         background-color: beige;
         height: 50px;
+        display: flex;
+        list-style: none;
 
-        div {
+        li {
             width: 100px;
             height: 50px;
         }

@@ -1,17 +1,36 @@
 import styles from './PortFolioSlide.module.scss';
+import GITHUB from '../../imgs/github.png';
+import Image from 'next/image';
 
 const PortFolioSlide = () => {
     return (
         <div className={styles.portFolioSlide}>
-            <div className={styles.container}>
-                <div style={{ backgroundColor: 'red'}}></div>
-                <div style={{ backgroundColor: 'yellow'}}></div>
-                <div style={{ backgroundColor: 'green'}}></div>
-                <div style={{ backgroundColor: 'blue'}}></div>
-                <div style={{ backgroundColor: 'gray'}}></div>
-                <div style={{ backgroundColor: 'purple'}}></div>
-                <div style={{ backgroundColor: 'orange'}}></div>
-            </div>
+            <ul className={styles.container}>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+                <li>
+                    <Image width={100} height={50} src={GITHUB} alt='test'/>
+                </li>
+            </ul>
         </div>
     )
 }
