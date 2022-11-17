@@ -9,6 +9,9 @@
             margin-top: 30px;
             @include pageTitle;
             width: 220px;
+            border-color: blue;
+            color: blue;
+            background-color: white;
         }
     }
 }

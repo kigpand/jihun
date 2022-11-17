@@ -1,4 +1,3 @@
-import PortFolioBtns from './PortFolioBtns';
 import styles from './PortFolioHeader.module.scss';
 
 const PortFolioHeader = () => {
@@ -7,7 +6,6 @@ const PortFolioHeader = () => {
             <div className={styles.title}>
                 <div className={styles.titleItem}>&lt;PortFolio /&gt;</div>
             </div>
-            <PortFolioBtns />
         </div>
     )
 }

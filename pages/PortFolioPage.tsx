@@ -1,14 +1,10 @@
-import PortFolioHeader from '../components/PortFolio/PortFolioHeader';
-import PortFolioText from '../components/PortFolio/PortFolioText';
-import PortFolioSlide from '../components/PortFolioSlide/PortFolioSlide';
+import PortFolio from '../components/PortFolio/PortFolio';
 import styles from '../styles/Home.module.scss';
 
 const PortFolioPage = () => {
     return (
         <div className={styles.portFolioPage}>
-            <PortFolioHeader />
-            <PortFolioSlide />
-            <PortFolioText />
+            <PortFolio />
         </div>
     )
 }
