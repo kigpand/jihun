@@ -19,10 +19,6 @@ const PortFolioModal = () => {
         }
     }, [portFolio]);
 
-    useEffect(() => {
-        console.log(item);
-    }, [item]);
-
     return (
         <div className={styles.portFolioModal}>
             <div className={styles.titleContainer}>
