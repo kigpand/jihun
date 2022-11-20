@@ -1,0 +1,29 @@
+@import '../../styles/common.scss';
+
+.portFolioBtns {
+    width: 800px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+
+    .btns {
+        display: flex;
+
+        div {
+            margin-right: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+    
+            &:hover {
+                cursor: pointer;
+                background-color: gray;
+            }
+        }
+    }
+
+    @include mobile {
+        width: 90vw;
+    }
+}

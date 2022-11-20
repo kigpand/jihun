@@ -30,13 +30,19 @@ const ProfileItem = () => {
                 setPos('70%');
                 break;
         }
-        setCurrentItem(item);
-        setStart(true);
+        
+        if (window.innerWidth < 767) {
+            onOpenModal(item);
+        } else {
+            setCurrentItem(item);
+            setStart(true);
+        }
     }
 
     function onItemAnimFinish() {
         onOpenModal(currentItem);
         setStart(false);
+        setCurrentItem('');
     }
 
     return (

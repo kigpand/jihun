@@ -14,4 +14,16 @@
             background-color: white;
         }
     }
+
+    @include mobile {
+        width: 90vw;
+
+        .title {
+            
+            .titleItem {
+                width: 150px;
+                font-size: 20px;
+            }
+        }
+    }
 }

@@ -8,8 +8,7 @@ const PortFolio = () => {
     return (
         <div className={styles.portFolio}>
             <PortFolioHeader />
-            {/* <PortFolioSlide /> */}
-            <PortFolioBody />
+            <PortFolioSlide />
             <PortFolioBtns />
         </div>
     )

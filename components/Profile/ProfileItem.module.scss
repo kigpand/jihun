@@ -49,9 +49,10 @@
 
     @include mobile {
         width: 300px;
-        top: 40%;
-
+        
         .item {
+            height: 50px;
+            border-radius: 8px;
             font-size: 13px;
             width: 100%;
             position: static;
