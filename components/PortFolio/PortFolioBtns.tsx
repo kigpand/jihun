@@ -6,6 +6,7 @@ const PortFolioBtns = () => {
     const { changePortCount } = usePortFolio();
 
     function onBtnClick(e: any) {
+        e.target.style.backgroundColor = 'gray';
         changePortCount(Number(e.target.id));
     }
 

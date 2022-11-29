@@ -1,24 +1,53 @@
 @import '../../styles/common.scss';
 
 .profile {
-    background-color: whitesmoke;
+    background-color: black;
+    color: white;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
     overflow: hidden;
     position: relative;
 
-    .title {
-        margin-top: 350px;
-        font-size: 30px;
-        width: 500px;
+    .container {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        animation: titleAni 2s ease-out;
+
+        div {
+            margin-left: 100px;
+            font-size: 100px;
+            font-family:  "Gill Sans", sans-serif;
+            margin-bottom: 20px;
+            // transform: translateY(50px);
+            opacity: 0;
+            
+            &:first-child {
+                animation: titleAni 1s linear forwards;
+            }
+
+            &:nth-child(2) {
+                animation: titleAni 1s linear forwards;
+                animation-delay: 1s;
+            }
+
+            &:nth-child(3) {
+                animation: titleAni 1s linear forwards;
+                animation-delay: 2s;
+            }
+
+            &:last-child {
+                font-size: 15px;
+                animation: titleAni 1s linear forwards;
+                animation-delay: 3s;
+            }
+        }
+
+
     }
+
 
     .mouseItem {
         position: absolute;
@@ -28,40 +57,12 @@
         animation: mouseColor 8s 1s linear infinite;
     }
 
-    @include mobile {
-        .title {
-            margin-top: 200px;
-            width: 300px;
-            font-size: 20px;
-            animation: titleMobileAni 2s ease-out;
-        }
-    }
-
     @keyframes titleAni {
-        from {
-            color: white;
-            opacity: 0;
-            font-size: 10px;
-        };
-
-        to {
-            color: black;
-            opacity: 1;
-            font-size: 30px;
+        0% {
         }
-    }
-
-    @keyframes titleMobileAni {
-        from {
-            color: white;
-            opacity: 0;
-            font-size: 0px;
-        };
-
-        to {
-            color: black;
+        100% {
             opacity: 1;
-            font-size: 20px;
+            // transform: translateY(-50px);
         }
     }
 

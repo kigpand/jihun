@@ -24,8 +24,15 @@ const Profile = () => {
 
     return(
         <div ref={profileRef} className={styles.profile} onClick={addBubbleEvent}>
-            <div className={styles.title} onAnimationEnd={() => setAnimEnd(true)}>Front-End Developer Jihun. Kim</div>
-            { animEnd && <ProfileItem />}
+            <div className={styles.container}>
+                <div>꼼꼼하고</div>
+                <div>책임감 있고</div>
+                <div>재밌는</div>
+                <div>개발자가 꿈이에요...</div>
+            </div>
+            <div className={styles.items}>
+            </div>
+            {/* { animEnd && <ProfileItem />} */}
             { modal && <ProfileModal /> }
         </div>
     )
