@@ -3,6 +3,8 @@ import { infoObj } from '../../../common/infoObj';
 import { IInfoItem } from '../../../interface/IInfoItem';
 import styles from './InfoModal.module.scss';
 import InfoModalItem from './InfoModalItem';
+import ME from '../../../imgs/me.jpg';
+import Image from 'next/image';
 
 const InfoModal = () => {
     return (
@@ -11,7 +13,7 @@ const InfoModal = () => {
                 <div className={styles.modalTitle}>&lt;Info /&gt;</div>
             </div>
             <div className={styles.myInfo}>
-                <div className={styles.img}></div>
+                <Image src={ME} alt='github' width={150} height={150} style={{ borderRadius: '50%'}}></Image>
                 <div className={styles.info}>
                     { infoObj.map((info: IInfoItem) => {
                         return <InfoModalItem title={info.title} text={info.text} key={info.title} />

@@ -1,17 +1,18 @@
 import styles from './PortFolioSlide.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import usePortFolio from '../../store/portFolio';
 
 const PortFolioSlide = () => {
     const pFRef = useRef<HTMLDivElement>(null);
-    const { portCount } = usePortFolio();
+    const { portFolio } = usePortFolio();
 
     useEffect(() => {
         if (pFRef.current) {
+            const count = portFolio === '포켓몬도감' ? 0 : portFolio === 'Jistargram' ? 1 : 2;
             const width = document.querySelector('.item');
-            pFRef.current.style.transform = `translateX(${-width!.getBoundingClientRect().width * portCount}px)`;
+            pFRef.current.style.transform = `translateX(${-width!.getBoundingClientRect().width * count}px)`;
         }
-    }, [portCount]);
+    }, [portFolio]);
 
     return (
         <div className={styles.portFolioSlide}>
