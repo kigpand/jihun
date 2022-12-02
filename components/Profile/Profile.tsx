@@ -8,8 +8,7 @@ import useUserStore from '../../store/store';
 const Profile = () => {
 
     const profileRef = useRef<HTMLDivElement>(null);
-    const [animEnd, setAnimEnd] = useState<Boolean>(false);
-    const { modal } = useUserStore();
+    const { modal, onOpenModal } = useUserStore();
 
     function addBubbleEvent(e: MouseEvent<HTMLDivElement>) {
         const bubble = document.createElement('div');
@@ -24,15 +23,16 @@ const Profile = () => {
 
     return(
         <div ref={profileRef} className={styles.profile} onClick={addBubbleEvent}>
-            <div className={styles.container}>
-                <div>꼼꼼하고</div>
-                <div>책임감 있고</div>
-                <div>재밌는</div>
-                <div>개발자가 꿈이에요...</div>
+            <div className={styles.menu}>
+                <div className={styles.menuItem} onClick={() => onOpenModal('info')}>Info</div>
+                <div className={styles.menuItem} onClick={() => onOpenModal('portFolio')}>Profile</div>
+                <div className={styles.menuItem} onClick={() => onOpenModal('more')}>Contact</div>
             </div>
-            <div className={styles.items}>
+            <div className={styles.wave}></div>
+            <div className={styles.text}>
+                <div className={styles.title}>Front-end Developer</div>
+                아직은 많이 부족하지만, 한걸음씩 차근차근 발전해나가고 있습니다.
             </div>
-            {/* { animEnd && <ProfileItem />} */}
             { modal && <ProfileModal /> }
         </div>
     )

@@ -11,10 +11,8 @@
     height: 600px;
     background-color: white;
     border-radius: 8px;
-    z-index: 1;
+    z-index: 200;
     border: 3px solid $borderColor;
-    animation: modalEvent 0.5s forwards linear;
-    opacity: 0;
 
     .modalTitle {
         margin-left: 10px;
@@ -30,17 +28,6 @@
 
     @media (max-width: 767px){ 
         width: 100%;
-    }
-
-    @keyframes modalEvent {
-        0% {
-            transform: rotateY(-90deg);
-        }
-        
-        100% {
-            transform: rotateY(0deg);
-            opacity: 1;
-        }
     }
 }
 
@@ -72,5 +59,5 @@
     }
 }
 
-$borderColor: rgb(121, 121, 121);
-$textColor: rgb(25, 163, 25);
+$borderColor: rgb(74, 24, 255);
+$textColor: rgb(13, 0, 85);;

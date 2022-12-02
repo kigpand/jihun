@@ -28,6 +28,16 @@ a {
   animation: bubbleAnim 1s forwards;
 }
 
+@keyframes modalCloseAnim {
+  0% {
+      top: 0;
+  }
+
+  100% {
+      top: -100vh;
+  }
+}
+
 @keyframes bubbleAnim {
   from {
       opacity: 1;

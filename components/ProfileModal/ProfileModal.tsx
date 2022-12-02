@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import usePortFolio from '../../store/portFolio';
 import useUserStore from '../../store/store';
 import ContactModal from '../Modals/ContactModal/ContactModal';
@@ -8,16 +8,23 @@ import styles from './ProfileModal.module.scss';
 
 const ProfileModal = () => {
 
+    const modalRef = useRef<HTMLDivElement>(null);
     const { modal, onCloseModal } = useUserStore();
     const { changePortFolio } = usePortFolio();
 
     function onClose() {
-        onCloseModal();
-        changePortFolio('포켓몬도감');
+        if (modalRef) {
+            modalRef.current!.style.animation = 'modalCloseAnim 1s forwards';
+            modalRef.current?.addEventListener('animationend', () => {
+                onCloseModal();
+                changePortFolio('포켓몬도감');
+                console.log('animation end');
+            });
+        }
     }
 
     return (
-        <div className={styles.profileModal}>
+        <div className={styles.profileModal} ref={modalRef}>
             { modal === 'portFolio' && <PortFolioModal />}
             { modal === 'info' && <InfoModal />}
             { modal === 'more' && <ContactModal />}
