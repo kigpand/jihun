@@ -18,7 +18,6 @@ const ProfileModal = () => {
             modalRef.current?.addEventListener('animationend', () => {
                 onCloseModal();
                 changePortFolio('포켓몬도감');
-                console.log('animation end');
             });
         }
     }

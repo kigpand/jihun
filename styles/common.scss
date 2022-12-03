@@ -53,6 +53,12 @@
     border-radius: 8px;
 }
 
+@mixin slideItem {
+    border-radius: 4px;
+    background-color: #444444;
+    border: 1px solid #7a7a7a;
+}
+
 @mixin mobile{
     @media (max-width: 767px){ 
         @content;

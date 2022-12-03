@@ -12,14 +12,14 @@ const ContactModal = () => {
                 <div className={styles.title}><b>I will prepare and some day my chance will come.</b><br />나는 준비할 것이다. 그러면 언젠가 나에게도 기회가 올 것이다.</div>
                 <div className={styles.subTitle}>- Abraham Lincoln -</div>
             </div>
-            <div className={styles.linkTitle}>&lt;Link &gt;</div>
+            <div className={styles.linkTitle}>&lt;Link /&gt;</div>
             <div className={styles.items}>
                 <div className={styles.item}>
                     <Image src={GITHUB} alt='github' width={30} height={30}></Image>
                     <span className={styles.texts}><a href='https://github.com/kigpand' target={'_blank'} rel="noreferrer">https://github.com/kigpand</a></span>
                 </div>
             </div>
-            <div className={styles.contactTitle}>&lt;Contact &gt;</div>
+            <div className={styles.contactTitle}>&lt;Contact /&gt;</div>
             <div className={styles.items}>
                 <div className={styles.item}>
                     <Image src={MAIL} alt='mail' width={30} height={30}></Image>

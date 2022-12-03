@@ -9,16 +9,19 @@ const PortFolioModalBtn = () => {
     function onBtnClick(e: MouseEvent<HTMLDivElement>) {
         btnsRef.current?.childNodes.forEach((child: any) => {
             child.style.backgroundColor = 'white';
+            child.style.color = 'black';
         });
-        e.currentTarget.style.backgroundColor = 'lightgray';
+        e.currentTarget.style.backgroundColor = 'gray';
+        e.currentTarget.style.color = 'white';
         changePortFolio(e.currentTarget.innerText);
     }
 
     return (
         <div className={styles.portFolioModalBtn} ref={btnsRef}>
-            <div className={styles.item} style={{ backgroundColor: 'lightgray' }} onClick={onBtnClick}>포켓몬도감</div>
+            <div className={styles.item} style={{ backgroundColor: 'gray', color: 'white' }} onClick={onBtnClick}>포켓몬도감</div>
             <div className={styles.item} onClick={onBtnClick}>Jistargram</div>
-            <div className={styles.item} onClick={onBtnClick}>ToDo-List</div>
+            <div className={styles.item} onClick={onBtnClick}>shopping</div>
+            <div className={styles.item} onClick={onBtnClick}>cloneTube</div>
         </div>
     )
 }
