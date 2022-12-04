@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import PortFolioImage from '../../components/PortFolioImage/PortFolioImage';
 import styles from '../../styles/PortFolio.module.scss';
 
@@ -5,6 +6,12 @@ const CloneTube = () => {
 
     return (
         <div className={styles.portFolio}>
+            <Head>
+                <link rel="shortcut icon" href="/favicon.ico" />
+                <title>Developer Jihun.kim</title>
+                <meta name="description" content="Jihun's proFile Site"></meta>
+                <meta name="author" content="jihun"></meta>
+            </Head>
             <div className={styles.header}>
                 <div className={styles.title}>YouTube Clone Coding Site</div>
                 <div className={styles.miniTitle}>
