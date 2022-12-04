@@ -1,0 +1,24 @@
+.portFolioSlide {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+    .slider {
+        overflow: hidden;
+        width: 350px;
+        height: 400px;
+        
+        .container {
+            display: flex;
+            width: 1400px;
+            height: 400px;
+            transition: 1s;
+
+            .item {
+                border: 5px solid gray;
+            }
+        }
+
+    }
+}

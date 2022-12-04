@@ -1,9 +1,5 @@
 import Image from 'next/image';
 import styles from './SlideItem.module.scss';
-import POKEIMG from '../../imgs/poke.png';
-import JIGRAMIMG from '../../imgs/jigram.png';
-import SHOPPINGIMG from '../../imgs/shopping.png';
-import CLONETUBEIMG from '../../imgs/youtube.png';
 import { slideItemObj } from './slideItemObj';
 import { useEffect, useState } from 'react';
 import { ISlideItemObj } from '../../interface/ISlideItemObj';
@@ -21,7 +17,6 @@ const SlideItem = ({list, id}: ISlideItem) => {
 
     useEffect(() => {
         if (slideItemObj) {
-            console.log(id);
             const result = slideItemObj.find((item: ISlideItemObj) => item.id === id);
             if (result) setItem(result);
         }
@@ -52,10 +47,10 @@ const SlideItem = ({list, id}: ISlideItem) => {
                     <div className={styles.moreBtn}><div onClick={onMoreBtn}>more...</div></div>
                 </div>
             }
-            {list === 'poke' && <Image src={POKEIMG}className='item' width={350} height={400} alt='poke' />}
-            {list === 'Jistargram' && <Image src={JIGRAMIMG}className='item' width={350} height={400} alt='jigram' />}
-            {list === 'shopping' && <Image src={SHOPPINGIMG}className='item' width={350} height={400} alt='shopping' />}
-            {list === 'cloneTube' && <Image src={CLONETUBEIMG}className='item' width={350} height={400} alt='cloneTube' />}
+            {list === 'poke' && <Image src='/imgs/pokemon/poke.png' className='item' width={350} height={400} alt='poke' />}
+            {list === 'Jistargram' && <Image src='/imgs/jigram/jigram.png' className='item' width={350} height={400} alt='jigram' />}
+            {list === 'shopping' && <Image src='/imgs/shopping/shopping.png' className='item' width={350} height={400} alt='shopping' />}
+            {list === 'cloneTube' && <Image src='/imgs/youtube/youtube.png' className='item' width={350} height={400} alt='cloneTube' />}
         </div>
     )
 }

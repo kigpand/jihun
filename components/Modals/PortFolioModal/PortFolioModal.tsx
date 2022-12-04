@@ -1,4 +1,4 @@
-import PortFolioSlide from '../../PortFolioSlide/PortFolioSlide';
+import PortFolioModalSlide from '../../PortFolioModalSlide/PortFolioModalSlide';
 import styles from './PortFolioModal.module.scss';
 import PortFolioModalBtn from './PortFolioModalBtn';
 
@@ -11,7 +11,7 @@ const PortFolioModal = () => {
             </div>
             <div className={styles.main}>
                 <PortFolioModalBtn />
-                <PortFolioSlide />
+                <PortFolioModalSlide />
             </div>
         </div>
     )

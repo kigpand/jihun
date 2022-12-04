@@ -1,10 +1,10 @@
-import { MouseEvent, useRef } from 'react';
+import { MouseEvent, useEffect, useRef } from 'react';
 import usePortFolio from '../../../store/portFolio';
 import styles from './PortFolioModalBtn.module.scss';
 
 const PortFolioModalBtn = () => {
     const btnsRef = useRef<HTMLDivElement>(null);
-    const { changePortFolio } = usePortFolio();
+    const { portFolio, changePortFolio } = usePortFolio();
 
     function onBtnClick(e: MouseEvent<HTMLDivElement>) {
         btnsRef.current?.childNodes.forEach((child: any) => {
@@ -15,6 +15,21 @@ const PortFolioModalBtn = () => {
         e.currentTarget.style.color = 'white';
         changePortFolio(e.currentTarget.innerText);
     }
+
+    useEffect(() => {
+        if (btnsRef.current) {
+            const index = portFolio === '포켓몬도감' ? 0 : portFolio === 'Jistargram' ? 1 : portFolio === 'shopping' ? 2 : 3;
+            btnsRef.current?.childNodes.forEach((child: any, i: number) => {
+                if (i === index) {
+                    child.style.backgroundColor = 'gray';
+                    child.style.color = 'white';
+                } else {
+                    child.style.backgroundColor = 'white';
+                    child.style.color = 'black';
+                }
+            });
+        }
+    }, [portFolio]);
 
     return (
         <div className={styles.portFolioModalBtn} ref={btnsRef}>

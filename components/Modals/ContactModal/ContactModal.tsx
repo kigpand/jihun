@@ -1,7 +1,4 @@
 import styles from './ContactModal.module.scss';
-import GITHUB from '../../../imgs/github.png';
-import MAIL from '../../../imgs/mail.png';
-import KAKAO from '../../../imgs/kakao.png';
 import Image from 'next/image';
 
 const ContactModal = () => {
@@ -15,18 +12,18 @@ const ContactModal = () => {
             <div className={styles.linkTitle}>&lt;Link /&gt;</div>
             <div className={styles.items}>
                 <div className={styles.item}>
-                    <Image src={GITHUB} alt='github' width={30} height={30}></Image>
+                    <Image src='/imgs/github.png' alt='github' width={30} height={30}></Image>
                     <span className={styles.texts}><a href='https://github.com/kigpand' target={'_blank'} rel="noreferrer">https://github.com/kigpand</a></span>
                 </div>
             </div>
             <div className={styles.contactTitle}>&lt;Contact /&gt;</div>
             <div className={styles.items}>
                 <div className={styles.item}>
-                    <Image src={MAIL} alt='mail' width={30} height={30}></Image>
+                    <Image src='/imgs/mail.png' alt='mail' width={30} height={30}></Image>
                     <span className={styles.texts}>kigpand@gmail.com</span>
                 </div>
                 <div className={styles.item}>
-                    <Image src={KAKAO} alt='kakao' width={30} height={30}></Image>
+                    <Image src='/imgs/kakao.png' alt='kakao' width={30} height={30}></Image>
                     <span className={styles.texts}><a href='https://open.kakao.com/o/sB6RgCpe' target={'_blank'} rel="noreferrer">KaKao Talk</a></span>
                 </div>
             </div>
