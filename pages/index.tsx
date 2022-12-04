@@ -10,6 +10,9 @@ const Home: NextPage = () => {
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
         <title>Developer Jihun.kim</title>
+        <meta name="description" content="Jihun's proFile Site"></meta>
+        <meta name="author" content="jihun"></meta>
+        <meta name="keyword" content="frontend, react, 프론트엔드, 개발자, 포트폴리오, Javascript"></meta>
       </Head>
       <Profile />
     </div>
