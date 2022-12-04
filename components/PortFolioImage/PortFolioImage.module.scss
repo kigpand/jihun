@@ -8,7 +8,14 @@
     .imgContainer {
         width: 100%;
         height: 600px;
-        background-color: blue;
+        text-align: center;
+        background-color: white;
+
+        .img {
+            width: 100%;
+            height: 600px;
+            object-fit: contain;
+        }
     }
 
     .btns {

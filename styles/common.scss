@@ -34,23 +34,11 @@
 @mixin pageTitle {
     font-weight: bold;
     font-size: 30px;
-    width: 150px;
-    padding: 3px;
-    background-color: rgb(214, 214, 214);
-    color: rgb(114, 114, 114);
-    border: 2px solid rgb(121, 121, 121);
-    border-radius: 8px;
 }
 
 @mixin pageMobileTitle {
     font-weight: bold;
     font-size: 20px;
-    width: 100px;
-    padding: 3px;
-    background-color: rgb(214, 214, 214);
-    color: rgb(114, 114, 114);
-    border: 2px solid rgb(121, 121, 121);
-    border-radius: 8px;
 }
 
 @mixin slideItem {

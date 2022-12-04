@@ -82,8 +82,10 @@ const PortFolioImage = ({ title, src }: PortFolioImage) => {
 
     return (
         <div className={styles.portFolioImage}>
-             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={src} className={styles.imgContainer} ref={imgRef} alt='image'></img>
+            <div className={styles.imgContainer}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} className={styles.img} ref={imgRef} alt='image'></img>
+            </div>
             <div className={styles.btns} ref={btnRef}>
                 <div style={{ backgroundColor: 'white', transform: 'scale(1.3)'}} onClick={() => onBtnClick(1)}></div>
                 <div onClick={() => onBtnClick(2)}></div>
