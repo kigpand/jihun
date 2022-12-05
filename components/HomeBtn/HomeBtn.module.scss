@@ -1,0 +1,15 @@
+.homeBtn {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+
+    .img {
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}

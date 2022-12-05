@@ -2,9 +2,6 @@
 
 .contactModal {
     @include modal;
-    .modalTitle {
-        width: 120px;
-    }
 
     .header {
         margin: 30px 0;
@@ -23,20 +20,26 @@
         }
     }
 
+    .underLine {
+        width: 50%;
+        height: 1px;
+        margin: 5px 0 0 10px;
+        background-color: white;
+    }
+
     .linkTitle,
     .contactTitle {
-        margin-left: 10px;
         @include linkItem;
+        text-align: start;
+        margin-left: 10px;
     }
 
     .linkTitle {
         margin-top: 50px;
-        width: 80px;
     }
 
     .contactTitle {
         margin-top: 80px;
-        width: 100px;
     }
 
     .items {

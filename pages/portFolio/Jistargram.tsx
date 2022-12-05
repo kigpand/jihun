@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HomeBtn from '../../components/HomeBtn/HomeBtn';
 import PortFolioImage from '../../components/PortFolioImage/PortFolioImage';
 import styles from '../../styles/PortFolio.module.scss';
 
@@ -13,6 +14,7 @@ const Jistargram = () => {
                 <meta name="author" content="jihun"></meta>
             </Head>
             <div className={styles.header}>
+                <HomeBtn />
                 <div className={styles.title}>Jistargram</div>
                 <div className={styles.miniTitle}>
                     Instargram Clone Coding Site

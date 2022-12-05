@@ -9,7 +9,7 @@ const InfoModal = () => {
     return (
         <div className={styles.infoModal}>
             <div className={styles.titleContainer}>
-                <div className={styles.modalTitle}>&lt;Info /&gt;</div>
+                <div className={styles.modalTitle}>Info</div>
             </div>
             <div className={styles.myInfo}>
                 <Image src='/imgs/me.jpg' alt='github' width={150} height={150} style={{ borderRadius: '50%'}}></Image>
@@ -21,7 +21,7 @@ const InfoModal = () => {
             </div>
             <div className={styles.horiLine}></div>
             <div className={styles.careerContainer}>
-                <div className={styles.careerTitle}>&lt;Career /&gt;</div>
+                <div className={styles.careerTitle}>Career</div>
                 <div className={styles.careerText}>
                     <div className={styles.period}>2021.04.01 ~ 2021.10.01</div>
                     <div className={styles.company}>창소프트아이앤아이</div>

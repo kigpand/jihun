@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HomeBtn from '../../components/HomeBtn/HomeBtn';
 import PortFolioImage from '../../components/PortFolioImage/PortFolioImage';
 import styles from '../../styles/PortFolio.module.scss';
 
@@ -13,6 +14,7 @@ const Shopping = () => {
                 <meta name="author" content="jihun"></meta>
             </Head>
             <div className={styles.header}>
+                <HomeBtn />
                 <div className={styles.title}>중고거래 Site</div>
                 <div className={styles.miniTitle}>
                     FireBase를 사용해 처음 DB통신을 구현한 중고거래 모방 Shopping Site

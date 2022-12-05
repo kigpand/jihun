@@ -11,24 +11,19 @@
         width: 100%;
     }
 
-    .modalTitle {
-        width: 100px;
-    }
-
     .myInfo {
         width: 100%;
         margin-top: 30px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
     }
 
     .horiLine {
         margin: 20px 0;
         width: 90%;
         height: 3px;
-        background-color: gray;
+        background-color: white;
     }
 
     .careerContainer {
@@ -36,7 +31,6 @@
         
         .careerTitle {
             margin-left: 10px;
-            width: 100px;
             @include linkItem;
         }
 
@@ -44,17 +38,20 @@
             width: 90%;
             margin: 10px 0 0 10px;
             display: flex;
+            color: black;
 
             .period {
                 width: 50%;
                 padding: 5px;
-                background-color: lightgray;
+                background-color: gray;
+                text-align: start;
             }
 
             .company {
                 width: 50%;
                 padding: 5px;
-                background-color: whitesmoke;
+                text-align: start;
+                background-color: rgb(214, 214, 214);
             }
         }
     }

@@ -9,30 +9,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(rgb(53, 50, 255), 1), rgba(rgb(74, 87, 15), 0) 80%, rgba(rgb(148, 134, 11), .5));
-        z-index: 11;
-        transform: translate3d(0, 0, 0);
-    }
-
-    .wave {
-        border-radius: 45%;
-        background-color: rgb(187, 135, 235);
-        position: absolute;
-        bottom: 50px;
-        width: 2500px;
-        height: 2500px;
-        transform-origin: 50% 48%;
-        opacity: 0.7;
-        animation: move 10s infinite linear;
-    }
+    background-color: rgb(82, 82, 82);
 
     .menu {
         position: absolute;
@@ -42,6 +19,8 @@
         z-index: 100;
         display: flex;
         font-size: 20px;
+        opacity: 0;
+        transition: 2s;
 
         .menuItem {
             margin-right: 30px;
@@ -58,10 +37,20 @@
         text-align: center;
         z-index: 100;
         line-height: 50px;
-
+        
         .title {
+            width: 100%;
             font-weight: bold;
-            font-size: 30px;
+            animation: typing 2s steps(29), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-size: 40px;
+        }
+
+        .sideTitle {
+            opacity: 0;
+            transition: 2s;
         }
     }
 
@@ -102,6 +91,38 @@
     @keyframes move {
         100% {
             transform: rotate(360deg);
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+
+    @include mobile {
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 30px;
+
+            .title {
+                width: 100%;
+                font-size: 25px;
+                // animation: typing 2s steps(21), blink .5s step-end infinite alternate;
+            }
+
+            .sideTitle {
+                margin-top: 10px;
+                font-size: 12px;
+            }
         }
     }
 }

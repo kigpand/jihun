@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HomeBtn from '../../components/HomeBtn/HomeBtn';
 import PortFolioImage from '../../components/PortFolioImage/PortFolioImage';
 import styles from '../../styles/PortFolio.module.scss';
 
@@ -13,6 +14,7 @@ const Pokemon = () => {
                 <meta name="author" content="jihun"></meta>
             </Head>
             <div className={styles.header}>
+                <HomeBtn />
                 <div className={styles.title}>포켓몬 도감</div>
                 <div className={styles.miniTitle}>
                     poke API의 데이터를 활용한 포켓몬 도감 Web APP

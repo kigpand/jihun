@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HomeBtn from '../../components/HomeBtn/HomeBtn';
 import PortFolioImage from '../../components/PortFolioImage/PortFolioImage';
 import styles from '../../styles/PortFolio.module.scss';
 
@@ -13,6 +14,7 @@ const CloneTube = () => {
                 <meta name="author" content="jihun"></meta>
             </Head>
             <div className={styles.header}>
+                <HomeBtn />
                 <div className={styles.title}>YouTube Clone Coding Site</div>
                 <div className={styles.miniTitle}>
                     YouTube API를 활용한 YouTube Clone Coding Site
