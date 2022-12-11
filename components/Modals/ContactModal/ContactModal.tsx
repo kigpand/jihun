@@ -22,7 +22,7 @@ const ContactModal = () => {
             <div className={styles.items}>
                 <div className={styles.item}>
                     <Image src='/imgs/mail.png' alt='mail' width={30} height={30}></Image>
-                    <span className={styles.texts}>kigpand@gmail.com</span>
+                    <span className={styles.emailTexts}>kigpand@gmail.com</span>
                 </div>
                 <div className={styles.item}>
                     <Image src='/imgs/kakao.png' alt='kakao' width={30} height={30}></Image>

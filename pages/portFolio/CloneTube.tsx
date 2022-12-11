@@ -25,8 +25,10 @@ const CloneTube = () => {
                 <div className={styles.textTitle}>About project</div>
                 <div className={styles.line}></div>
                 <p className={styles.textContent}>
-                    저의 첫 배포 작품이고 처음으로 외부 API를 사용해본 작품입니다.<br />
-                    유튜브 제공 API를 알게되어 사용해보고 싶어 구글링을 통해 사용법을 배워 실적용해봤습니다.
+                    React를 공부하고 처음으로 만든 Web App입니다<br />
+                    유튜브 제공 API를 알게되어 사용해보고 싶어 구글링을 통해 사용법을 배워 실적용해봤습니다.<br />
+                    이 프로젝트를 통해 React의 동작 원리에 대해 이해를 확실히 할수 있었습니다<br />
+                    또한 외부 API를 처음으로 다뤄보면서 개발을 더욱 흥미있게 했습니다.
                 </p>
             </div>
             <div className={styles.texts}>

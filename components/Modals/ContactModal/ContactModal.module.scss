@@ -21,10 +21,10 @@
     }
 
     .underLine {
-        width: 50%;
+        width: 95%;
         height: 1px;
         margin: 5px 0 0 10px;
-        background-color: white;
+        background-color: black;
     }
 
     .linkTitle,
@@ -49,10 +49,13 @@
             align-items: center;
             padding-top: 10px;
     
+            .emailTexts,
             .texts {
                 margin-left: 10px;
                 font-size: 17px;
-    
+            }
+
+            .texts {
                 &:hover {
                     text-decoration: underline;
                 }
