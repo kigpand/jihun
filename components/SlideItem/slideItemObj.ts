@@ -14,7 +14,7 @@ export const slideItemObj: ISlideItemObj[] = [
     {
         id: 2,
         title: '간단한 중고거래 Web App',
-        tools: ['JavaScript', 'ReactJs', 'Google Firebase', 'CSS', 'HTML']
+        tools: ['JavaScript', 'ReactJs', 'Google Firebase', 'CSS', 'HTML', 'Zustand']
     },
     {
         id: 3,

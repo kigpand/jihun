@@ -49,7 +49,7 @@ const SlideItem = ({list, id}: ISlideItem) => {
             }
             {list === 'poke' && <Image src='/imgs/pokemon/poke.png' className='item' width={350} height={400} alt='poke' />}
             {list === 'Jistargram' && <Image src='/imgs/jigram/jigram.png' className='item' width={350} height={400} alt='jigram' />}
-            {list === 'shopping' && <Image src='/imgs/shopping/shopping.png' className='item' width={350} height={400} alt='shopping' />}
+            {list === 'shopping' && <Image src='/imgs/shopping/mobileShopping.png' className='item' width={350} height={400} alt='shopping' />}
             {list === 'cloneTube' && <Image src='/imgs/youtube/youtube.png' className='item' width={350} height={400} alt='cloneTube' />}
         </div>
     )

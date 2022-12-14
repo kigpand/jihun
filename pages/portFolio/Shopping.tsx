@@ -28,7 +28,8 @@ const Shopping = () => {
                     Google Firebase의 RealTime DB를 공부해 처음으로 DB통신이란걸 해본 프로젝트입니다.<br />
                     Login 또한 Google Auth를 사용해 Google Login을 구현했습니다.<br />
                     DB쪽 관련 지식이 모자란 상태에서 시작을 해 개발에 어려움이 있었지만<br />
-                    해당 프로젝트를 진행하면서 DB와 서버통신의 필요성을 느껴 더욱 열심히 해야겠다는 마음가짐을 가질수 있었습니다.
+                    해당 프로젝트를 진행하면서 DB와 서버통신의 필요성을 느껴 더욱 열심히 해야겠다는 마음가짐을 가질수 있었습니다.<br />
+                    현재 지속적으로 리팩토링 중이며 상태관리로 이번에 공부한 zustand를 사용해봤습니다.
                 </p>
             </div>
             <div className={styles.texts}>
@@ -40,6 +41,7 @@ const Shopping = () => {
                     <li>Javascript</li>
                     <li>React</li>
                     <li>Google Firebase</li>
+                    <li>zustand</li>
                 </ul>
             </div>
             <div className={styles.texts}>
