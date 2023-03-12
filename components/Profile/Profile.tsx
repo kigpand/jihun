@@ -1,49 +1,44 @@
-import { useRef, useState } from 'react';
-import styles from './Profile.module.scss';
-import React, { MouseEvent } from 'react';
-import ProfileItem from './ProfileItem';
-import ProfileModal from '../ProfileModal/ProfileModal';
-import useUserStore from '../../store/store';
+/* eslint-disable @next/next/no-img-element */
+import { useRef } from "react";
+import styles from "./Profile.module.scss";
+import React, { MouseEvent } from "react";
+import InfoModal from "../ProfileModal/info/InfoModal";
+import ContactModal from "../ProfileModal/contact/ContactModal";
+import PortFolioModal from "../ProfileModal/portfolio/PortFolioModal";
 
 const Profile = () => {
+  const profileRef = useRef<HTMLDivElement>(null);
 
-    const profileRef = useRef<HTMLDivElement>(null);
-    const menuRef = useRef<HTMLDivElement>(null);
-    const sideTitleRef = useRef<HTMLDivElement>(null);
-    const { modal, onOpenModal } = useUserStore();
+  function addBubbleEvent(e: MouseEvent<HTMLDivElement>) {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubble.style.left = e.clientX + "px";
+    bubble.style.top = e.clientY + "px";
+    profileRef.current?.appendChild(bubble);
+    bubble.addEventListener("animationend", (e: any) => {
+      e.target.parentNode.removeChild(e.target);
+    });
+  }
 
-    function addBubbleEvent(e: MouseEvent<HTMLDivElement>) {
-        const bubble = document.createElement('div');
-        bubble.classList.add('bubble');
-        bubble.style.left = e.clientX + 'px';
-        bubble.style.top = e.clientY + 'px';
-        profileRef.current?.appendChild(bubble);
-        bubble.addEventListener('animationend', (e: any) => {
-            e.target.parentNode.removeChild(e.target);
-        });
-    }
-
-    function onAnimEnd() {
-        if (menuRef.current && sideTitleRef.current) {
-            menuRef.current.style.opacity = '1';
-            sideTitleRef.current.style.opacity = '1';
-        }
-    }
-
-    return(
-        <div ref={profileRef} className={styles.profile} onClick={addBubbleEvent}>
-            <div className={styles.menu} ref={menuRef}>
-                <div className={styles.menuItem} onClick={() => onOpenModal('info')}>Info</div>
-                <div className={styles.menuItem} onClick={() => onOpenModal('portFolio')}>Profile</div>
-                <div className={styles.menuItem} onClick={() => onOpenModal('more')}>Contact</div>
-            </div>
-            <div className={styles.text}>
-                <div className={styles.title} onAnimationEnd={onAnimEnd}>Front-end Developer Jihun.Kim</div>
-                <div className={styles.sideTitle} ref={sideTitleRef}>아직은 많이 부족하지만, 한걸음씩 차근차근 발전해나가고 있습니다.</div>
-            </div>
-            { modal && <ProfileModal /> }
-        </div>
-    )
-}
+  return (
+    <div ref={profileRef} className={styles.profile} onClick={addBubbleEvent}>
+      <img src="/imgs/info.png" alt="info" className={styles.info} />
+      <img
+        src="/imgs/portfolio.png"
+        alt="portfolio"
+        className={styles.portfolio}
+      />
+      <img src="/imgs/contact.png" alt="contact" className={styles.contact} />
+      <img src="/imgs/memotecon.png" alt="미모티콘" className={styles.icon} />
+      <div className={styles.text}>
+        포기를 모르는 프론트엔드 개발자
+        <br /> 김지훈입니다!
+      </div>
+      {/* <InfoModal /> */}
+      {/* {<PortFolioModal />} */}
+      {/* <ContactModal /> */}
+    </div>
+  );
+};
 
 export default Profile;

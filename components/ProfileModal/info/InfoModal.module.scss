@@ -1,0 +1,28 @@
+.infoModal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-color: white;
+  overflow-y: auto;
+  animation: modalAnim 1s forwards;
+
+  @keyframes modalAnim {
+    0% {
+      top: -100vh;
+    }
+
+    90% {
+      top: 10px;
+    }
+
+    100% {
+      top: 0;
+    }
+  }
+}

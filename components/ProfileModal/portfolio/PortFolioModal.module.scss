@@ -1,0 +1,26 @@
+@import "../../../styles/common.scss";
+
+.portFolioModal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  display: flex;
+  background-color: $backgroundColor;
+  color: $textColor;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: modalAnim 1s forwards;
+
+  @keyframes modalAnim {
+    0% {
+      left: 100vw;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+}
