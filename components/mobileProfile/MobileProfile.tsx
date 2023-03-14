@@ -61,7 +61,7 @@ const MobileProfile = () => {
         />
       )}
       {portfolio && <PortFolioModal unProfile={() => setPortfolio(false)} />}
-      {contact && <ContactModal />}
+      {contact && <ContactModal unContact={() => setContact(false)} />}
     </div>
   );
 };
