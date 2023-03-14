@@ -1,0 +1,126 @@
+@import "../../styles/common.scss";
+
+.profile {
+  width: 100vw;
+  height: 100vh;
+  color: $textColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: $backgroundColor;
+
+  .menu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    opacity: 0;
+    transition: 2s;
+
+    .menuItem {
+      margin-right: 30px;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .text {
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+
+    .title {
+      width: 100%;
+      font-weight: bold;
+      animation: typing 2s steps(29), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-size: 40px;
+    }
+
+    .sideTitle {
+      opacity: 0;
+      transition: 2s;
+    }
+  }
+
+  .mouseItem {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 90%;
+    animation: mouseColor 8s 1s linear infinite;
+  }
+
+  @keyframes mouseColor {
+    0% {
+      background-color: yellow;
+    }
+
+    20% {
+      background-color: orange;
+    }
+
+    40% {
+      background-color: red;
+    }
+
+    60% {
+      background-color: blue;
+    }
+
+    80% {
+      background-color: green;
+    }
+
+    100% {
+      background-color: purple;
+    }
+  }
+
+  @keyframes move {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @include mobile {
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 30px;
+
+      .title {
+        width: 100%;
+        font-size: 25px;
+        // animation: typing 2s steps(21), blink .5s step-end infinite alternate;
+      }
+
+      .sideTitle {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

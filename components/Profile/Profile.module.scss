@@ -1,4 +1,5 @@
 @import "../../styles/common.scss";
+@import "../../styles/func.scss";
 
 .profile {
   width: 100vw;
@@ -13,9 +14,11 @@
   background-color: $backgroundColor;
 
   .icon {
+    width: get-vw(300px);
     border-radius: 50%;
     padding: 10px;
     background-color: white;
+    border: 10px solid skyblue;
   }
 
   .info,
@@ -32,22 +35,20 @@
 
   .info {
     top: 10%;
-    left: 20%;
-    width: 300px;
+    left: 15%;
+    width: get-vw(200px);
   }
 
   .portfolio {
     top: 10%;
-    right: 15%;
-    width: 400px;
-    height: 300px;
+    right: 10%;
+    width: get-vw(250px);
   }
 
   .contact {
     bottom: 10%;
-    right: 15%;
-    width: 400px;
-    height: 300px;
+    right: 10%;
+    width: get-vw(250px);
   }
 
   .text {

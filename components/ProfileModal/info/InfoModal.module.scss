@@ -1,3 +1,5 @@
+@import "../../../styles/common.scss";
+
 .infoModal {
   width: 100vw;
   height: 100vh;
@@ -7,10 +9,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: black;
-  background-color: white;
+  color: $textColor;
+  background-color: $backgroundColor;
   overflow-y: auto;
   animation: modalAnim 1s forwards;
+  transition: all 0.5s;
+
+  .homeBtn {
+    width: 700px;
+    z-index: 1000;
+    position: absolute;
+
+    .img {
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   @keyframes modalAnim {
     0% {
@@ -23,6 +41,12 @@
 
     100% {
       top: 0;
+    }
+  }
+
+  @include mobile {
+    .homeBtn {
+      width: 90%;
     }
   }
 }

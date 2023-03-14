@@ -1,56 +1,56 @@
-@import '../../styles/common.scss';
+@import "../../styles/common.scss";
 
 .infoHeader {
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    
-    .title {
-        width: 100%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
-        .titleItem {
-            margin-top: 30px;
-            @include pageTitle;
-        }
+  .title {
+    width: 100%;
+
+    .titleItem {
+      margin-top: 30px;
+      @include pageTitle;
+    }
+  }
+
+  .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .infoLine {
+    width: 100%;
+    height: 4px;
+    margin: 20px 0;
+    background-color: lightgray;
+  }
+
+  @include mobile {
+    width: 90%;
+
+    .backBtn {
+      right: 20px;
+    }
+
+    .title {
+      .titleItem {
+        margin: 30px 0 0 10px;
+        @include pageMobileTitle;
+      }
     }
 
     .main {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin-top: 20px;
+      flex-direction: column;
     }
 
     .infoLine {
-        width: 100%;
-        height: 4px;
-        margin: 20px 0;
-        background-color: lightgray;
+      width: 100%;
     }
-
-    @include mobile {
-        width: 90%;
-
-        .backBtn {
-            right: 20px;
-        }
-
-        .title {
-            .titleItem {
-                margin: 30px 0 0 10px;
-                @include pageMobileTitle;
-            }
-        }
-
-        .main {
-            flex-direction: column;
-        }
-
-        .infoLine {
-            width: 100%;
-        }
-    }
+  }
 }
