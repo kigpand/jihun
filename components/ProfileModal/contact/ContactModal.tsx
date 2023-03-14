@@ -2,11 +2,7 @@ import styles from "./ContactModal.module.scss";
 import Image from "next/image";
 import { useRef } from "react";
 
-interface IContactModal {
-  unContact: any;
-}
-
-const ContactModal = ({ unContact }: IContactModal) => {
+const ContactModal = ({ unContact }: any) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const onHomeBtn = () => {
